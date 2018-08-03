@@ -26,9 +26,6 @@ I really want to show the .gif, while it has no difference with .jpg for some sy
 
 I strongly recommend you to run the example in real device to see how it works.
 
-<img src="https://raw.githubusercontent.com/c19354837/react-native-system-setting/master/screenshot/ios.png" width = "40%"/>&nbsp;&nbsp;&nbsp;
-<img src="https://raw.githubusercontent.com/c19354837/react-native-system-setting/master/screenshot/android.jpg" width = "40%" />
-
 ## Install
 Run `npm i -S react-native-system-setting`
 
@@ -110,10 +107,10 @@ const volumeListener = SystemSetting.addVolumeListener((data) => {
 });
 
 //remove listener when you need it no more
-SystemSetting.removeVolumeListener(volumeListener)       
+SystemSetting.removeVolumeListener(volumeListener)
 ```
 
-> `setVolume` can do more, [more detail](https://github.com/c19354837/react-native-system-setting/blob/master/API.md) 
+> `setVolume` can do more, [more detail](https://github.com/c19354837/react-native-system-setting/blob/master/API.md)
 
 **brightness**
 
@@ -229,16 +226,16 @@ Some APIs are dangerous for iOS:
 * `switchLocation()`
 * `switchAirplane()`
 
-I implement them by using non-public APIs, which is not permitted on the App Store, see [this issure](https://github.com/c19354837/react-native-system-setting/issues/28). 
+I implement them by using non-public APIs, which is not permitted on the App Store, see [this issure](https://github.com/c19354837/react-native-system-setting/issues/28).
 
-If you are developing a App Store version, you have to give up these APIs. 
+If you are developing a App Store version, you have to give up these APIs.
 
 To avoid unnecessary trouble, you can call `SystemSetting.setAppStore(true)` which will invalidate these APIs.
 
-> As an alternative, you can show a tip to tell the user how to change the system setting. 
+> As an alternative, you can show a tip to tell the user how to change the system setting.
 
 ## Android permission
- 
+
 ### API
 
 Default permissions are removed since V1.5.0, see [this PR](https://github.com/c19354837/react-native-system-setting/pull/44). You need to declare the corresponding permissions in your app's AndroidManifest.xml, see [example AndroidManifest.xml](https://github.com/c19354837/react-native-system-setting/blob/master/examples/SystemSettingExample/android/app/src/main/AndroidManifest.xml)
@@ -250,22 +247,22 @@ Default permissions are removed since V1.5.0, see [this PR](https://github.com/c
     package="YourPackageName"
     android:versionCode="1"
     android:versionName="1.0">
-    
+
     <!-- setBrightness() & setScreenMode() & saveBrightness() -->
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-    
+
     <!-- isWifiEnabled() -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    
+
     <!-- isBluetoothEnabled() -->
     <uses-permission android:name="android.permission.BLUETOOTH"/>
-    
+
     <!-- * switchWifiSilence() -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
 
     <!-- * switchBluetoothSilence() -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
-    
+
     ...
 
 </manifest>
