@@ -13,6 +13,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <ifaddrs.h>
 #import <net/if.h>
+#import "SKMuteSwitchDetector.h"
 
 @import UIKit;
 @import MediaPlayer;
@@ -87,7 +88,20 @@ RCT_EXPORT_METHOD(setVolume:(float)val config:(NSDictionary *)config){
 
 RCT_EXPORT_METHOD(getVolume:(NSString *)type resolve:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
     dispatch_sync(dispatch_get_main_queue(), ^{
-        resolve([NSNumber numberWithFloat:[volumeSlider value]]);
+        [SKMuteSwitchDetector checkSwitch:^(BOOL success, BOOL silent) {
+            if (success) {
+                if (silent) {
+                    resolve(@0);
+                } else {
+                    resolve([NSNumber numberWithFloat:[volumeSlider value]]);
+                }
+            }
+            else {
+                resolve([NSNumber numberWithFloat:[volumeSlider value]]);
+            }
+        }];
+
+
     });
 }
 

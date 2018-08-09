@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30D12B701EDC0C7100775BF0 /* RTCSystemSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D12B6F1EDC0C7100775BF0 /* RTCSystemSetting.m */; };
+		E173F568211C966100A2DEFA /* SKMuteSwitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E173F567211C966100A2DEFA /* SKMuteSwitchDetector.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		30D12B621EDC0C3A00775BF0 /* libRCTSystemSetting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTSystemSetting.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D12B6E1EDC0C7100775BF0 /* RTCSystemSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSystemSetting.h; sourceTree = "<group>"; };
 		30D12B6F1EDC0C7100775BF0 /* RTCSystemSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSystemSetting.m; sourceTree = "<group>"; };
+		E173F566211C966100A2DEFA /* SKMuteSwitchDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKMuteSwitchDetector.h; sourceTree = "<group>"; };
+		E173F567211C966100A2DEFA /* SKMuteSwitchDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKMuteSwitchDetector.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,8 @@
 		30D12B591EDC0C3A00775BF0 = {
 			isa = PBXGroup;
 			children = (
+				E173F566211C966100A2DEFA /* SKMuteSwitchDetector.h */,
+				E173F567211C966100A2DEFA /* SKMuteSwitchDetector.m */,
 				30D12B6E1EDC0C7100775BF0 /* RTCSystemSetting.h */,
 				30D12B6F1EDC0C7100775BF0 /* RTCSystemSetting.m */,
 				30D12B631EDC0C3A00775BF0 /* Products */,
@@ -113,6 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E173F568211C966100A2DEFA /* SKMuteSwitchDetector.m in Sources */,
 				30D12B701EDC0C7100775BF0 /* RTCSystemSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
