@@ -13,7 +13,6 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <ifaddrs.h>
 #import <net/if.h>
-#import "SharkfoodMuteSwitchDetector.h"
 
 @import UIKit;
 @import MediaPlayer;
@@ -24,8 +23,6 @@
     NSDictionary *setting;
     MPVolumeView *volumeView;
     UISlider *volumeSlider;
-    SharkfoodMuteSwitchDetector *detector;
-    bool silentSwitchEnabled;
 }
 
 -(instancetype)init{
@@ -37,10 +34,6 @@
                                                    object:nil];
 
         cb = [[CBCentralManager alloc] initWithDelegate:nil queue:nil options:@{CBCentralManagerOptionShowPowerAlertKey: @NO}];
-        detector = [SharkfoodMuteSwitchDetector shared];
-        detector.silentNotify = ^(BOOL silent) {
-            silentSwitchEnabled = silent;
-        };
     }
 
     [self initVolumeView];
@@ -94,11 +87,7 @@ RCT_EXPORT_METHOD(setVolume:(float)val config:(NSDictionary *)config){
 
 RCT_EXPORT_METHOD(getVolume:(NSString *)type resolve:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject){
     dispatch_sync(dispatch_get_main_queue(), ^{
-        if (silentSwitchEnabled) {
-            resolve(@0);
-        } else {
-            resolve([NSNumber numberWithFloat:[volumeSlider value]]);
-        }
+        resolve([NSNumber numberWithFloat:[volumeSlider value]]);
     });
 }
 

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		30D12B701EDC0C7100775BF0 /* RTCSystemSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D12B6F1EDC0C7100775BF0 /* RTCSystemSetting.m */; };
-		E1E3481D2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E3481C2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.m */; };
-		E1E3481F2114BECA00C18C88 /* mute.caf in Sources */ = {isa = PBXBuildFile; fileRef = E1E3481E2114BEC700C18C88 /* mute.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,9 +26,6 @@
 		30D12B621EDC0C3A00775BF0 /* libRCTSystemSetting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTSystemSetting.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		30D12B6E1EDC0C7100775BF0 /* RTCSystemSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTCSystemSetting.h; sourceTree = "<group>"; };
 		30D12B6F1EDC0C7100775BF0 /* RTCSystemSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTCSystemSetting.m; sourceTree = "<group>"; };
-		E1E3481B2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharkfoodMuteSwitchDetector.h; sourceTree = "<group>"; };
-		E1E3481C2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SharkfoodMuteSwitchDetector.m; sourceTree = "<group>"; };
-		E1E3481E2114BEC700C18C88 /* mute.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = mute.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +42,6 @@
 		30D12B591EDC0C3A00775BF0 = {
 			isa = PBXGroup;
 			children = (
-				E1E3481E2114BEC700C18C88 /* mute.caf */,
-				E1E3481B2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.h */,
-				E1E3481C2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.m */,
 				30D12B6E1EDC0C7100775BF0 /* RTCSystemSetting.h */,
 				30D12B6F1EDC0C7100775BF0 /* RTCSystemSetting.m */,
 				30D12B631EDC0C3A00775BF0 /* Products */,
@@ -121,9 +113,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E3481D2114BE8C00C18C88 /* SharkfoodMuteSwitchDetector.m in Sources */,
 				30D12B701EDC0C7100775BF0 /* RTCSystemSetting.m in Sources */,
-				E1E3481F2114BECA00C18C88 /* mute.caf in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
